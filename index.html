@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>反知乎搜索</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"/>
+        <link rel="stylesheet" href="https://unpkg.com/mdui@2/mdui.css">
+        
+    </head>
+    <body><div class="mdui-prose">
+        <mdui-text-field  id="text" label="输入内容"></mdui-text-field>
+        <mdui-button onclick="search()">搜索</mdui-button></div>
+        <script src="https://unpkg.com/mdui@2/mdui.global.js"></script>
+        <script>
+            function search() {
+                text = document.getElementById("text").value
+                text = text.replace(" ", "+")
+                window.location.href = "https://cn.bing.com?q=" + '-site:zhihu.com' + '+' + text
+            }
+        </script>
+    </body>
+</html>
